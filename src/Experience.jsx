@@ -44,7 +44,7 @@ export default function Experience() {
                 <primitive
                     object={computer.scene}
                     position={[0.2, -1.1, -0.1]}
-                    rotation={[-0.15, -0.68, -0.04]}
+                    rotation={[-0.35, -0.68, -0.16]}
                 >
                     <Html
                         transform
