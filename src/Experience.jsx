@@ -7,11 +7,11 @@ import {
     Environment,
     useGLTF,
 } from "@react-three/drei";
+import Plane from "./components/plane";
 
 export default function Experience() {
     const computer = useGLTF(
         // "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf"
-        // "/old_computer/scene.gltf"
         "/desktop_computer/scene.gltf"
     );
 
@@ -53,7 +53,7 @@ export default function Experience() {
                         position={[-0, 1.45, -0.24]}
                         rotation={[-0, -0, -0.0]}
                     >
-                        <iframe src="http://localhost:5174/" />
+                        <iframe src="http://localhost:5173/" />
                     </Html>
                 </primitive>
 
