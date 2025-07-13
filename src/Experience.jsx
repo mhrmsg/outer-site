@@ -6,8 +6,10 @@ import {
     Float,
     Environment,
     useGLTF,
+    OrbitControls,
 } from "@react-three/drei";
 import Plane from "./components/plane";
+import Coffee from "./components/Coffee";
 
 export default function Experience() {
     const computer = useGLTF(
@@ -15,10 +17,9 @@ export default function Experience() {
         "/desktop_computer/scene.gltf"
     );
 
-    console.log(computer);
-
     return (
         <>
+            {/* <OrbitControls makeDefault></OrbitControls> */}
             <color args={["#241a1a"]} attach="background" />
 
             <Environment preset="city" />
@@ -44,7 +45,7 @@ export default function Experience() {
                 <primitive
                     object={computer.scene}
                     position={[0.2, -1.1, -0.1]}
-                    rotation={[-0.35, -0.68, -0.16]}
+                    rotation={[-0.345, -0.68, -0.16]}
                 >
                     <Html
                         transform
@@ -67,6 +68,12 @@ export default function Experience() {
                     MHR
                 </Text>
                 {/* </Float> */}
+
+                <Coffee
+                    position={[1.4, -1, 1.64]}
+                    scale={3}
+                    rotation={[-0.2, 0, -0.1]}
+                ></Coffee>
             </PresentationControls>
 
             <ContactShadows
