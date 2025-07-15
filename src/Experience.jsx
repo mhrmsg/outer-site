@@ -8,7 +8,6 @@ import {
     useGLTF,
     OrbitControls,
 } from "@react-three/drei";
-import Plane from "./components/plane";
 import Coffee from "./components/Coffee";
 
 export default function Experience() {
