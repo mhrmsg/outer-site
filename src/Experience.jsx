@@ -53,7 +53,7 @@ export default function Experience() {
                         position={[-0, 1.45, -0.24]}
                         rotation={[-0, -0, -0.0]}
                     >
-                        <iframe src="http://localhost:5173/" />
+                        <iframe src="http://42.192.112.223:9002/" />
                     </Html>
                 </primitive>
 
