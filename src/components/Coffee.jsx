@@ -23,7 +23,11 @@ const CoffeeSmokeMaterial = shaderMaterial(
 
 extend({ CoffeeSmokeMaterial });
 
-export default function Scene({ scale = 1, position = [0, 0, 0] }) {
+export default function Scene({
+    scale = 1,
+    position = [0, 0, 0],
+    rotation = [0, 0, 0],
+}) {
     const smokeMaterialRef = useRef();
 
     /**
@@ -48,7 +52,7 @@ export default function Scene({ scale = 1, position = [0, 0, 0] }) {
     });
 
     return (
-        <group position={position} rotation={[-0.2, 0, -0.1]}>
+        <group position={position} rotation={rotation}>
             <primitive object={gltf.scene} scale={[scale, scale, scale]} />
             <mesh
                 position={[0, 1.4, 0]}
