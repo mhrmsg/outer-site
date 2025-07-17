@@ -2,11 +2,13 @@ import "./style.css";
 import ReactDOM from "react-dom/client";
 import { Canvas } from "@react-three/fiber";
 import Experience from "./Experience.jsx";
+import LoadingScreen from "./components/LoadingScreen.jsx";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
 root.render(
     <>
+        <LoadingScreen></LoadingScreen>
         <Canvas
             className="r3f"
             style={{

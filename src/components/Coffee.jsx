@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { useFrame, useLoader } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import { Loader, OrbitControls, useGLTF, useProgress } from "@react-three/drei";
 import * as THREE from "three";
 import { shaderMaterial } from "@react-three/drei";
 import { extend } from "@react-three/fiber";
@@ -8,6 +8,8 @@ import { extend } from "@react-three/fiber";
 import coffeeSmokeVertexShader from "../shaders/coffee/vertex.glsl";
 import coffeeSmokeFragmentShader from "../shaders/coffee/fragment.glsl";
 import perlinTextureImg from "/perlin.png";
+import { GLTFLoader } from "three/examples/jsm/Addons.js";
+import Loading from "../libs/Loading";
 
 /**
  * 定义 ShaderMaterial
@@ -41,6 +43,13 @@ export default function Scene({
      * 加载 glTF 模型
      */
     const gltf = useGLTF("/cup.gltf");
+
+    const loadding = new Loading();
+    useEffect(() => {
+        loadding.trigger("loadedSource", ["cup", 1, 1]);
+        console.log("模型已加载完成:", gltf);
+    }, [gltf]);
+
     const smokeRef = useRef();
     /**
      * 更新动画
