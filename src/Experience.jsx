@@ -8,13 +8,23 @@ import {
     useGLTF,
     OrbitControls,
 } from "@react-three/drei";
+import { useEffect } from "react";
 import Coffee from "./components/Coffee";
-
+import Loading from "./libs/Loading";
 export default function Experience() {
     const computer = useGLTF(
         // "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf"
         "/desktop_computer/scene.gltf"
     );
+
+    const loadding = new Loading();
+    useEffect(() => {
+        loadding.trigger("loadedSource", ["computer", 2, 3]);
+    }, [computer]);
+
+    const iframeLoadding = (e) => {
+        loadding.trigger("loadedSource", ["innerSite", 3, 3]);
+    };
 
     return (
         <>
@@ -53,7 +63,10 @@ export default function Experience() {
                         position={[-0, 1.45, -0.24]}
                         rotation={[-0, -0, -0.0]}
                     >
-                        <iframe src="http://42.192.112.223:9002/" />
+                        <iframe
+                            src="http://42.192.112.223:9002/"
+                            onLoad={iframeLoadding}
+                        />
                     </Html>
                 </primitive>
 

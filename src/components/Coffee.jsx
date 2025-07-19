@@ -46,7 +46,7 @@ export default function Scene({
 
     const loadding = new Loading();
     useEffect(() => {
-        loadding.trigger("loadedSource", ["cup", 1, 1]);
+        loadding.trigger("loadedSource", ["cup", 1, 3]);
         console.log("模型已加载完成:", gltf);
     }, [gltf]);
 

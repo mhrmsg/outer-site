@@ -15,10 +15,10 @@ void main() {
   float angle = twisPerlin * 10.0;
   newPosition.xz = rotate2D(newPosition.xz, angle);
 
-    //wind
-    // vec2 windOffset = vec2(texture(uPerlinTexture, vec2(0.25, uTime * 0.01)).r - 0.5, texture(uPerlinTexture, vec2(0.75, uTime * 0.01)).r - 0.5);
-    // windOffset *= pow(uv.y, 2.0) * 10.0;
-    // newPosition.xz += windOffset;
+  //wind
+  // vec2 windOffset = vec2(texture(uPerlinTexture, vec2(0.25, uTime * 0.01)).r - 0.5, texture(uPerlinTexture, vec2(0.75, uTime * 0.01)).r - 0.5);
+  // windOffset *= pow(uv.y, 2.0) * 10.0;
+  // newPosition.xz += windOffset;
 
   gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0);
 
