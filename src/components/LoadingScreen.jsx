@@ -187,10 +187,7 @@ const LoadingScreen = () => {
                         {showLoadingResources && doneLoading && (
                             <p>
                                 All Content Loaded, launching{" "}
-                                <b style={styles.green}>
-                                    'Henry Heffernan Portfolio Showcase'
-                                </b>{" "}
-                                V1.0
+                                <b style={styles.green}>'MHR Showcase'</b> V1.0
                             </p>
                         )}
                         <div style={styles.spacer} />
