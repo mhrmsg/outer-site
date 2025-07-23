@@ -64,7 +64,7 @@ export default function Experience() {
                         rotation={[-0, -0, -0.0]}
                     >
                         <iframe
-                            src="http://42.192.112.223:9002/"
+                            src="https://42.192.112.223:9002/"
                             onLoad={iframeLoadding}
                         />
                     </Html>
